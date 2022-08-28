@@ -1,0 +1,20 @@
+{
+    "name": "reclic/easymde-bundle",
+    "description": "Provides Symfony with EasyMDE - Markdown Editor",
+    "type": "symfony-bundle",
+    "require": {
+        "symfony/form": "^6.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Reclic\\EasyMDEBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bricebou",
+            "email": "brice@reclic.dev"
+        }
+    ]
+}
