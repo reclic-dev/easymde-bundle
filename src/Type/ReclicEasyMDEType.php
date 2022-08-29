@@ -4,6 +4,8 @@ namespace Reclic\EasyMDEBundle\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\FormView;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ReclicEasyMDEType extends AbstractType
@@ -12,9 +14,14 @@ class ReclicEasyMDEType extends AbstractType
     {
         $resolver->setDefaults([
             'attr' => [
-                'class' => 'easymde'
+                'data-toolbar' => 'heading, bold, italic, |, unordered-list, ordered-list, |, link, image, |, preview, side-by-side'
             ]
         ]);
+    }
+
+    public function buildView(FormView $view, FormInterface $form, array $options)
+    {
+        $view->vars['attr']['class'] = 'easymde';
     }
 
     public function getParent()
