@@ -15,12 +15,7 @@ let config = {
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
         ],
-    },
-    optimization: {
-        splitChunks: {
-            chunks: 'all',
-        },
-    },
+    }
 }
 
 module.exports = config;

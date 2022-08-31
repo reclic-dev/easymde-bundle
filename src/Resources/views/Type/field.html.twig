@@ -1,0 +1,7 @@
+{% block easymde_widget %}
+    <textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+
+    <script>
+        {{ easymde }}.dispatchEvent(new CustomEvent('append', { bubbles: true }));
+    </script>
+{% endblock %}
